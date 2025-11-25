@@ -2,7 +2,7 @@
 #include <string>
 #include <memory>
 
-namespace vsite::oop::v4 
+namespace vsite::oop::v4
 {
     class animal {
     public:
@@ -13,35 +13,32 @@ namespace vsite::oop::v4
 
     class insect : public animal {
     public:
-        virtual ~insect() = default;
+        unsigned legs() const override { return 6; }
     };
 
     class spider : public animal {
     public:
-        virtual ~spider() = default;
+        unsigned legs() const override { return 8; }
     };
 
     class bird : public animal {
     public:
-        virtual ~bird() = default;
+        unsigned legs() const override { return 2; }
     };
 
     class cockroach : public insect {
     public:
         std::string species() const override;
-        unsigned legs() const override;
     };
 
     class tarantula : public spider {
     public:
         std::string species() const override;
-        unsigned legs() const override;
     };
 
     class sparrow : public bird {
     public:
         std::string species() const override;
-        unsigned legs() const override;
     };
 
     class leg_counter {

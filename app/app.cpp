@@ -4,13 +4,10 @@
 namespace vsite::oop::v4
 {
     std::string cockroach::species() const { return "cockroach"; }
-    unsigned cockroach::legs() const { return 6; }
 
     std::string tarantula::species() const { return "tarantula"; }
-    unsigned tarantula::legs() const { return 8; }
 
     std::string sparrow::species() const { return "sparrow"; }
-    unsigned sparrow::legs() const { return 2; }
 
     std::string leg_counter::add_animal(animal* a) {
         total_legs += a->legs();
